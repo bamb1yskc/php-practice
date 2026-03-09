@@ -1,15 +1,32 @@
 <?php
 // Q1 変数と文字列
-
+<?php
+$name = '犬塚';
+echo '私の名前は ' . $name . ' です';
 
 // Q2 四則演算
-
+<?php
+$num = 5 * 4;
+echo $num;
+echo $num / 2;
 
 // Q3 日付操作
-
+<?php
+$time = date('Y-m-d H:i:s');
+echo '現在時刻は、 ' . $time . ' です。';
 
 // Q4 条件分岐-1 if文
-
+<?php
+$device = 'windows';
+if ($device === 'windows') {
+    echo '使用OSは、windowsです。';
+} else {
+    if ($device === 'mac') {
+        echo '使用OSは、macです。';
+    } else {
+        echo 'どちらでもありません。';
+    }
+}
 
 // Q5 条件分岐-2 三項演算子
 
