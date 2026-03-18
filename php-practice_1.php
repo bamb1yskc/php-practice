@@ -109,15 +109,57 @@ foreach ($pref as $key => $value) {
 }
 
 // Q10 関数-1
-
+<?php
+function hello($name)
+{
+    return $name . 'さん、こんにちは。';
+}
+echo hello('田中');
+echo hello('太田');
 
 // Q11 関数-2
-
+<?php
+function calcTaxInPrice($price)
+{
+    return $price * 1.1;
+}
+$price = 1000;
+$taxInPrice = calcTaxInPrice($price);
+echo $price . '円の商品の税込価格は' . $taxInPrice . '円です。';
 
 // Q12 関数とif文
-
+<?php
+function distinguishNum($num)
+{
+    if ($num % 2 === 0) {
+        return $num . 'は偶数です。';
+    } else {
+        return $num . 'は奇数です。';
+    }
+}
+echo distinguishNum(11) . '<br>';
+echo distinguishNum(24) . '<br>';
 
 // Q13 関数とswitch文
+<?php
+function evaluateGrade($grade)
+{
+    switch ($grade) {
+        case 'A':
+        case 'B':
+            return '合格です。';
 
+        case 'C':
+            return '合格ですが追加課題があります。';
+
+        case 'D':
+            return '不合格です。';
+
+        default:
+            return '判定不明です。講師に問い合わせてください。';
+    }
+}
+echo evaluateGrade('A') . '<br>';
+echo evaluateGrade('Z') . '<br>';
 
 ?>
